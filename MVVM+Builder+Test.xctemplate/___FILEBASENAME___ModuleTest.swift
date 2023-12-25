@@ -13,7 +13,8 @@ final class ___VARIABLE_productName___ModuleTest: XCTestCase {
     /// Стаб-сборщик **___VARIABLE_productName___** модуля.
     private let stub: ___VARIABLE_productName___Builder = {
         let builder = ___VARIABLE_productName___Builder()
-        builder.buildComponents()
+        let module = Module(id: <#T##Module.ID#>)
+        builder.buildComponents(for: module)
         return builder
     }()
     
@@ -37,31 +38,45 @@ final class ___VARIABLE_productName___ModuleTest: XCTestCase {
         self.viewModel?.model
     }
     
-    /// Проверка на успешно инжектирование **UIView**
+    /// Проверка на успешное инжектирование **UIView**
     /// для **___VARIABLE_productName___** модуля.
     
     func testControllerInjectedCorrectly() {
         XCTAssertNotNil(self.controller)
     }
     
-    /// Проверка на успешно инжектирование **UIView**
+    /// Проверка на успешное инжектирование **UIView**
     /// для **___VARIABLE_productName___** модуля.
     
     func testViewInjectedCorrectly() {
         XCTAssertNotNil(self.view)
     }
     
-    /// Проверка на успешно инжектирование **View Model**
+    /// Проверка на успешное инжектирование **View Model**
     /// для **___VARIABLE_productName___** модуля.
     
     func testViewModelInjectedCorrectly() {
         XCTAssertNotNil(self.viewModel)
     }
     
-    /// Проверка на успешно инжектирование **Model**
+    /// Проверка на успешное инжектирование **Model**
     /// для **___VARIABLE_productName___** модуля.
     
     func testModelInjectedCorrectly() {
         XCTAssertNotNil(self.model)
+    }
+
+    /// Проверка на успешное инжектирование **Module**
+    /// в ``___VARIABLE_productName___Controller`` как ``___VARIABLE_productName___ControllerOutput``.
+    
+    func testControllerOutputInjectedCorrectly() {
+        XCTAssertNotNil(self.controller?.module)
+    }
+    
+    /// Проверка на успешное инжектирование **Module**
+    /// в ``___VARIABLE_productName___Model`` как ``___VARIABLE_productName___ModelOutput``.
+    
+    func testModelOutputInjectedCorrectly() {
+        XCTAssertNotNil(self.model?.module)
     }
 }
