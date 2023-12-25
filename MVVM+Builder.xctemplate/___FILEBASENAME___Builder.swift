@@ -37,8 +37,8 @@ final class ___FILEBASENAMEASIDENTIFIER___: ComponentsBuilder {
         let model = ___VARIABLE_productName___Model()
         let viewModel = ___VARIABLE_productName___ViewModel(model: model)
         let controller = ___VARIABLE_productName___Controller(body: body, viewModel: viewModel)
-        //controller.module = module
-        //model.module = module
+        controller.module = module
+        model.module = module
         self.body = body
         self.viewController = controller
         self.viewModel = viewModel
