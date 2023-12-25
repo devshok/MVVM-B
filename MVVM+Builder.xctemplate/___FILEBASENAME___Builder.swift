@@ -31,7 +31,7 @@ final class ___FILEBASENAMEASIDENTIFIER___: ComponentsBuilder {
     
     // MARK: - BUILDING
     
-    func buildComponents(for module: Module) {
+    func buildComponents(for module: Module? = nil) {
         let style = ___VARIABLE_productName___Style()
         let body = ___VARIABLE_productName___View(style: style)
         let model = ___VARIABLE_productName___Model()
