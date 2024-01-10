@@ -29,7 +29,7 @@ final class ___FILEBASENAMEASIDENTIFIER___: ComponentsBuilder {
     
     private var model: ___VARIABLE_productName___Model?
     
-    // MARK: - BUILDING
+    // MARK: - 1. BUILDING
     
     func buildComponents(for module: Module? = nil) {
         let style = ___VARIABLE_productName___Style()
@@ -45,11 +45,13 @@ final class ___FILEBASENAMEASIDENTIFIER___: ComponentsBuilder {
         self.model = model
     }
     
-    // MARK: - GIVING
+    // MARK: - 2. GIVING
     
     var controller: UIViewController? {
         self.viewController
     }
+
+    // MARK: - 3. DESTRUCTING
     
     func destructComponents() {
         self.viewController?.module = nil
