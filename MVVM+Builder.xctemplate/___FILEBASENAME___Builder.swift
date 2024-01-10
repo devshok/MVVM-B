@@ -37,7 +37,11 @@ final class ___FILEBASENAMEASIDENTIFIER___: ComponentsBuilder {
         let model = ___VARIABLE_productName___Model()
         let viewModel = ___VARIABLE_productName___ViewModel(model: model)
         let controller = ___VARIABLE_productName___Controller(body: body, viewModel: viewModel)
+        // conform `Module` to `___VARIABLE_productName___ControllerOutput` in `Module+ControllerOutput.swift` file
+        // and then remove these comments:
         controller.module = module
+        // conform `Module` to `___VARIABLE_productName___ModelOutput` in `Module+ModelOutput.swift` file
+        // and then remove these comments:
         model.module = module
         self.body = body
         self.viewController = controller
