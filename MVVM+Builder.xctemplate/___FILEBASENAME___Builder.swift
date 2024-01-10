@@ -60,5 +60,9 @@ final class ___FILEBASENAMEASIDENTIFIER___: ComponentsBuilder {
     func destructComponents() {
         self.viewController?.module = nil
         self.model?.module = nil
+        self.body = nil
+        self.viewController = nil
+        self.viewModel = nil
+        self.model = nil
     }
 }
